@@ -1,7 +1,7 @@
 databases:
   - name: TheRialNews
-    databaseName: TheRialNews
-    user: TheRialNews
+    databaseName: therialnews_twf6
+    user: therialnews_twf6_user
     plan: free
 
 services:
@@ -9,8 +9,8 @@ services:
     name: TheRialNews
     runtime: ruby
     plan: free
-    buildCommand: "./bin/render-build.sh"
-    startCommand: "bundle exec rails server"
+    buildCommand: "./bin/render-build.sh && bundle exec rails db:migrate"
+    startCommand: "bundle exec rails server -b 0.0.0.0"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
