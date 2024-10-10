@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: TheRialNews
+    env: ruby
+    plan: free  # Cambia esto si deseas otro plan
+    buildCommand: "bundle install && yarn install && bundle exec rake assets:precompile"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase: TheRialNews  # El nombre de la base de datos creada en Render
