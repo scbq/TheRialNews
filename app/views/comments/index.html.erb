@@ -1,0 +1,20 @@
+<div class="container">
+  <h1 class="text-center mt-5">Comentarios</h1>
+  <div class="row mt-4">
+    <% @comments.each do |comment| %>
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title"><%= comment.user.email %></h5>
+            <p class="card-text"><%= comment.content %></p>
+            <%= link_to 'Ver', comment, class: "btn btn-primary" %>
+            <% if current_user && current_user.admin? %>
+              <%= link_to 'Eliminar', comment, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <%= link_to 'Nuevo Comentario', new_comment_path, class: "btn btn-success mt-4" %>
+</div>

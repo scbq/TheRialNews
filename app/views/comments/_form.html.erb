@@ -1,0 +1,10 @@
+<div class="container">
+  <h1><%= form_title %></h1>
+  <%= form_with(model: @comment, local: true) do |form| %>
+    <div class="mb-3">
+      <%= form.label :content, class: "form-label" %>
+      <%= form.text_area :content, class: "form-control", rows: 3 %>
+    </div>
+    <%= form.submit 'Guardar', class: "btn btn-primary" %>
+  <% end %>
+</div>

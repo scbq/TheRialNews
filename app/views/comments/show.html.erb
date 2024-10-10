@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Comentario por <%= @comment.user.email %></h5>
+      <p class="card-text"><%= @comment.content %></p>
+      <%= link_to 'Editar', edit_comment_path(@comment), class: "btn btn-primary" %>
+      <%= link_to 'Volver', comments_path, class: "btn btn-secondary" %>
+      <% if current_user && current_user.admin? %>
+        <%= link_to 'Eliminar', @comment, method: :delete, data: { confirm: '¿Estás seguro?' }, class: "btn btn-danger" %>
+      <% end %>
+    </div>
+  </div>
+</div>
