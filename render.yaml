@@ -1,7 +1,7 @@
 databases:
   - name: TheRialNews
-    databaseName: TheRialNews
-    user: TheRialNews
+    databaseName: therialnews_twf6
+    user: therialnews_twf6_user
     plan: free
 
 services:
