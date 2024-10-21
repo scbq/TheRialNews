@@ -113,7 +113,7 @@ GEM
     drb (2.2.1)
     error_highlight (0.6.0)
     erubi (1.13.0)
-    faker (3.4.2)
+    faker (3.5.1)
       i18n (>= 1.8.11, < 2)
     globalid (1.2.1)
       activesupport (>= 6.1)
@@ -317,7 +317,7 @@ DEPENDENCIES
   devise (~> 4.9, >= 4.9.4)
   dotenv-rails
   error_highlight (>= 0.4.0)
-  faker (~> 3.4)
+  faker (~> 3.5)
   importmap-rails
   jbuilder
   pg (~> 1.1)
