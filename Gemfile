@@ -62,7 +62,7 @@ end
 gem 'devise', '~> 4.9', '>= 4.9.4'
 gem "cancancan", "~> 3.6"
 
-gem "faker", "~> 3.4"
+gem "faker", "~> 3.5"
 
 gem 'dotenv-rails', groups: [:development, :test]
 
